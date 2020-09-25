@@ -1,3 +1,4 @@
+var aboutTabClicked = false;
 function showTab(evt, tabName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -19,8 +20,9 @@ function showTab(evt, tabName) {
   if( evt != null ){
     $(".homepage").fadeOut("slow");
     evt.currentTarget.className += " active";
-    if (evt.currentTarget.id == "aboutTab") {
-      // var typed = new Typed(".element", options);
+    if (evt.currentTarget.id == "aboutTab" && !aboutTabClicked) {
+      aboutTabClicked = true;
+      var typed = new Typed(".element", options);
     }
 
   }
@@ -55,7 +57,7 @@ var options = {
   strings: ["My name is <strong>Amit Saluja</strong>. <br><br> <p class='railWayFont'> I create Website & Webapp. <br><br><br> <a href='javascript:void(0)' onclick=\"showTab(event, 'contact')\">Contact Me!!!</a> </p>"],
   typeSpeed: 25
 };
-var typed = new Typed(".element", options);
+// var typed = new Typed(".element", options);
 
 /* Particle JS Init */
 particlesJS("particles-js", {
