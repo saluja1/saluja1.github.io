@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <TITLE>Amit Saluja</TITLE>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <meta name="description" content="Amit Saluja">
+      <meta name="author" content="Amit Saluja">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/all.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Cinzel%7CMontserrat%7CRaleway" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script src="js/all.min.js"></script>
+      <script src="js/script.js"></script>
+   </head>
+   <body>
+        <div id="tabDiv">
+            <ul id="topNav" class="tab">
+                <li>
+                    <a id="resumeTab" href="https://docs.google.com/document/d/1s2eH4r61rRSpwq2LzY0beRu0RzP5vsoo0WdWTJKKbs8/edit?usp=sharing" class="tablinks" target="_blank">
+                        <p class="tabContent">CV</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="contactTab" href="javascript:void(0)" class="tablinks" onclick="showTab(event, 'contact')"><p class="tabContent">Contact</p></a>
+                </li>
+                <li>
+                    <a id="workTab" href="javascript:void(0)" class="tablinks" onclick="showTab(event, 'work')"><p class="tabContent">Work</p></a>
+                </li>
+                <li>
+                    <a id="educationTab" href="javascript:void(0)" class="tablinks" onclick="showTab(event, 'education')"><p class="tabContent">Education</p></a>
+                </li>
+                <li>
+                    <a id="aboutTab" href="javascript:void(0)" class="tablinks" onclick="showTab(event, 'about')"><p class="tabContent">About Me</p></a>
+                </li>
+            </ul>
+            <ul id="sideNavPush" class="tab">
+              <li id="openSideNav">
+                <a href="javascript:void(0)" class="tablinks" onclick="openNav()"><i class="fas fa-bars sideNavContent"></i></a>
+              </li>
+              <li id="closeSideNav">
+                <a href="javascript:void(0)" class="tablinks" onclick="closeNav()"><i class="fas fa-times sideNavContent"></i></a>
+              </li>
+            </ul>
+        </div>
+        <div id="sideNavigation" class="sidenav">
+          <a id="aboutTab" class="tablinks" href="javascript:void(0)" onclick="showTab(event, 'about')"><p class="sideNavContent">About Me</p></a>
+          <a id="educationTab" class="tablinks"  href="javascript:void(0)" onclick="showTab(event, 'education')"><p class="sideNavContent">Education</p></a>
+          <a id="workTab" class="tablinks" href="javascript:void(0)" onclick="showTab(event, 'work')"><p class="sideNavContent">Work</p></a>
+          <a id="contactTab" class="tablinks" href="javascript:void(0)" onclick="showTab(event, 'contact')"><p class="sideNavContent">Contact</p></a>
+          <a id="resumeTab" class="tablinks" href="https://docs.google.com/document/d/1s2eH4r61rRSpwq2LzY0beRu0RzP5vsoo0WdWTJKKbs8/edit?usp=sharing" class="tablinks" target="_blank"><p class="sideNavContent">CV</p></a>
+        </div>
+        <!-- particles.js container -->
+        <div id="particles-js"></div>
+        <div id="scrollableDiv" onscroll="scrollEvent()">
+          <div class="modalbox" id="education">
+            <div class="box">
+              <p class="title">Education</p>
+              <div class="content">
+                <table  class="diffFontClass">
+                  <tr>
+                    <td><strong>The ICFAI University, Dehradun</strong></td>
+                  </tr>
+                  <tr>
+                    <td>CGPA - 7.0 </td>
+                  </tr>
+                  <tr>
+                    <td>B. Tech, Computer Science Engineering ( 2012 - 2017 )</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Air Force School, Agra</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Result - 72.2%</td>
+                  </tr>
+                  <tr>
+                    <td>AISSCE, PCM (2009 - 11)</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Subhash Public School, Giridih</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Result -  84.4</td>
+                  </tr>
+                  <tr>
+                    <td>AISSE(2007 - 09)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modalbox" id="work">
+            <div class="box">
+              <p class="title">Work - <a href="https://docs.google.com/document/d/1s2eH4r61rRSpwq2LzY0beRu0RzP5vsoo0WdWTJKKbs8/edit?usp=sharing" class="first after" target="_blank">CV </a> </p>
+              <div class="content">
+                <div>
+                  <p style="text-align:center"> <strong>Project</strong> </p>
+                  <hr>
+                  <table  class="diffFontClass">
+                    <tr>
+                      <td><strong>Color Detection Desktop App using OpenCV</strong></td>
+                    </tr>
+                    <tr>
+                      <td class="railWayFont">- A simple App which uses the Laptop Camera to detect Red Color in the Image Captured.</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><strong>REST based JWT( Json Web Token ) Authentication </strong></td>
+                    </tr>
+                    <tr>
+                      <td class="railWayFont">- An authentication Backend using cakephp for stateless authorization. <a href="https://github.com/crossdsection/cakephp-userauth-jwt"> Code </a></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tic Tac Toe Game using Javascript</strong></td>
+                    </tr>
+                    <tr>
+                      <td class="railWayFont">- A simple Tic Tac Toe Game, which blocks the users move on the basis of its winning sets.</td>
+                    </tr>
+                  </table>
+                  <hr>
+                  <p style="text-align:center"> <strong>Experience</strong> </p>
+                  <hr>
+                  <table  class="diffFontClass">
+                    <tr>
+                      <td><strong>Mobisy Technologies Pvt. Ltd.</strong> ( May 2015 - May 2017 ) - Software Engineer</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><strong>The Utopia Academy</strong> ( August 2017 - August 2018 ) - Founder</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Toluna India Pvt. Ltd</strong> ( Sept 2018 - Present ) - Web Developer</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modalbox" id="about">
+            <div class="box">
+              <p class="title">About Me</p>
+              <div class="content">
+                <div class="container">
+                  <div class="item-a">
+                    <img src="img/profile.jpg" alt="Profile Image" style="width:80%;">
+                  </div>
+                  <div class="item-b">
+                    <span class="element diffFontClass"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modalbox" id="contact">
+            <div class="box">
+              <p class="title">Contact</p>
+              <div id="centeredmenu" class="content">
+                <p class="diffFontClass" style="text-align:center">
+                  <strong>When Life gives you Load, just Code!! </strong>
+                </p>
+                <br><br>
+                <ul>
+                  <li>
+                    <a href="https://github.com/saluja1" target="_blank" title="GitHub">
+                      <img src="img/github.png" alt="Github" class="iconsize">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/amit-saluja-a2853460/" target="_blank" title="LinkedIn">
+                      <img src="img/linkedin.png" alt="LinkedeIn" class="iconsize">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:amit.saluja.106@gmail.com" title="Google+">
+                      <img src="img/gmail.png" alt="Gmail" class="iconsize">
+                    </a>
+                  </li>
+                </ul>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="js/scripts.js"></script>
+   </body>
+</html>
