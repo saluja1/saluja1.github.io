@@ -17,37 +17,45 @@ function showTab(evt, tabName) {
   // Show the current tab, and add an "active" class to the link that opened the tab
   document.getElementById(tabName).style.display = "block";
   if( evt != null ){
+    $(".homepage").fadeOut("slow");
     evt.currentTarget.className += " active";
+    if (evt.currentTarget.id == "aboutTab") {
+      var typed = new Typed(".element", options);
+    }
+
   }
 }
 
-function scrollEvent(){
-  console.log( document.body.scrollTop );
-  if( document.body.scrollTop > 0 && document.body.scrollTop < 24 ){
-    document.getElementById( "aboutTab" ).click();
-  } else if( document.body.scrollTop > 24 && document.body.scrollTop < 48 ){
-    document.getElementById( "educationTab" ).click();
-  } else if( document.body.scrollTop > 48 && document.body.scrollTop < 72 ){
-    document.getElementById( "workTab" ).click();
-  } else if( document.body.scrollTop > 72 && document.body.scrollTop < 96 ){
-    document.getElementById( "contactTab" ).click();
-  } else {
-    return false;
-  }
-}
+// function scrollEvent(){
+//   if( document.body.scrollTop > 0 && document.body.scrollTop < 24 ){
+//     document.getElementById( "aboutTab" ).click();
+//     $("#homepage").css({zIndex: 0});
+//   } else if( document.body.scrollTop > 24 && document.body.scrollTop < 48 ){
+//     document.getElementById( "educationTab" ).click();
+//     $("#homepage").css({zIndex: 0});
+//   } else if( document.body.scrollTop > 48 && document.body.scrollTop < 72 ){
+//     document.getElementById( "workTab" ).click();
+//   } else if( document.body.scrollTop > 72 && document.body.scrollTop < 96 ){
+//     $("#homepage").css({zIndex: 0});
+//     document.getElementById( "contactTab" ).click();
+//     $("#homepage").css({zIndex: 0});
+//   } else {
+//     return false;
+//   }
+// }
 
-function closeTab(evt, tabName) {
-  document.getElementById(tabName).style.display = "none";
-}
+// function closeTab(evt, tabName) {
+//   document.getElementById(tabName).style.display = "none";
+// }
 
-document.getElementById( 'aboutTab' ).click();
+// document.getElementById( 'aboutTab' ).click();
 
 /* Typd JS Init */
 var options = {
-  strings: ["My name is <strong>Amit Saluja</strong>. <br><br> <p class='railWayFont'> I create Web <br><br> <a href='javascript:void(0)' onclick=\"showTab(event, 'contact')\">Contact Me!!!</a> </p>"],
+  strings: ["My name is <strong>Amit Saluja</strong>. <br><br> <p class='railWayFont'> I create Website & Webapp. <br><br><br> <a href='javascript:void(0)' onclick=\"showTab(event, 'contact')\">Contact Me!!!</a> </p>"],
   typeSpeed: 25
 };
-var typed = new Typed(".element", options);
+// var typed = new Typed(".element", options);
 
 /* Particle JS Init */
 particlesJS("particles-js", {
@@ -119,3 +127,38 @@ function closeNav() {
     document.getElementById("openSideNav").style.display = "block";
     document.getElementById("closeSideNav").style.display = "none";
 }
+
+
+function typeEffect(element, speed) {
+  var text = element.innerHTML;
+  element.innerHTML = "";
+  
+  var i = 0;
+  var timer = setInterval(function() {
+    if (i < text.length) {
+      element.append(text.charAt(i));
+      i++;
+    } else {
+      clearInterval(timer);
+    }
+  }, speed);
+}
+
+
+$( document ).ready(function() {
+var speed = 75;
+var h1 = document.querySelector('h1');
+var h3 = document.querySelector('h3');
+var delay = h1.innerHTML.length * speed + speed;
+
+typeEffect(h1, speed);
+
+
+setTimeout(function(){
+  h3.style.display = "inline-block";
+
+  typeEffect(h3, 40);
+}, delay);
+
+});
+
