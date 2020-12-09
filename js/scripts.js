@@ -54,7 +54,7 @@ function showTab(evt, tabName) {
 
 /* Typd JS Init */
 var options = {
-  strings: ["My name is <strong>Amit Saluja</strong>. <br><br> <p class='railWayFont'> I create Website & Webapp. </p>"],
+  strings: ["My name is <strong>Amit Saluja</strong>. <br><br> <p class='railWayFont'> Experienced Web Developer with a demonstrated history of working in the market research industry. Skilled in PHP, WordPress, Laravel, jQuery, JavaScript, and React.js. </p>"],
   typeSpeed: 25
 };
 // var typed = new Typed(".element", options);
